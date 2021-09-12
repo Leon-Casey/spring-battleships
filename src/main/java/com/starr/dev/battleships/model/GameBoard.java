@@ -1,17 +1,18 @@
 package com.starr.dev.battleships.model;
 
 import com.starr.dev.battleships.service.GameService;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class GameBoard {
 
     Cell[][] board;
-    int gameBoardLength = 4;
-    int shipNumber = 3;
+    int gameBoardLength;
+    int shipNumber;
 
-    public GameBoard() {
-        this.board = GameService.createBoardWithShips(gameBoardLength, shipNumber);
+    public GameBoard(int gameBoardLength, int shipNumber) {
+        this.gameBoardLength = gameBoardLength;
+        this.shipNumber = shipNumber;
     }
-
 
     public Cell[][] getBoard() {
         return board;

@@ -8,7 +8,7 @@ import java.util.Random;
 @Service
 public class GameService {
 
-    public static Cell[][] createBoardWithShips(int gameBoardLength, int shipNumber) {
+    public Cell[][] createBoardWithShips(int gameBoardLength, int shipNumber) {
         Cell[][] board = new Cell[gameBoardLength][gameBoardLength];
         for (int i = 0; i < gameBoardLength; i++)
             for (int j = 0; j < gameBoardLength; j++)
@@ -29,7 +29,7 @@ public class GameService {
         return board;
     }
 
-    private static int[] generateShipCoordinates(int gameBoardLength) {
+    private int[] generateShipCoordinates(int gameBoardLength) {
         int[] coordinates = new int[2];
         for (int i = 0; i < coordinates.length; i++) {
             coordinates[i] = new Random().nextInt(gameBoardLength);

@@ -1,7 +1,8 @@
-package com.starr.dev.battleships.app;
+package com.starr.dev.battleships;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class BattleShipsApplication {
